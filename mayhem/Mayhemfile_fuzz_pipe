@@ -1,0 +1,11 @@
+project: savantenvs/nrsc5
+target: fuzz_pipe
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_pipe/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_pipe
+    libfuzzer: true
+    timeout: 5

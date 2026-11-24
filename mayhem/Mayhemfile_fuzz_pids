@@ -1,0 +1,11 @@
+project: savantenvs/nrsc5
+target: fuzz_pids
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_pids/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_pids
+    libfuzzer: true
+    timeout: 5
